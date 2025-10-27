@@ -1,0 +1,9 @@
+{
+	"name": "priyaadfproject24oct25",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "da6b7b4c-05da-4eb8-a790-69e3db4c7b05",
+		"tenantId": "921678d5-3d0d-4ded-ae1f-2a7c776541ed"
+	}
+}
