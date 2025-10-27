@@ -17,7 +17,21 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "metadata",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"dd_container": {
+								"value": "@pipeline().parameters.pp_container",
+								"type": "Expression"
+							},
+							"dd_directory": {
+								"value": "@pipeline().parameters.pp_input_directory",
+								"type": "Expression"
+							},
+							"dd_filename": {
+								"value": "@pipeline().parameters.pp_filename",
+								"type": "Expression"
+							}
+						}
 					},
 					"fieldList": [
 						"childItems"
