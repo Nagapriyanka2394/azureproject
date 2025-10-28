@@ -114,6 +114,9 @@
 			},
 			"pp_output_directory": {
 				"type": "string"
+			},
+			"pp_archive_directory": {
+				"type": "string"
 			}
 		},
 		"folder": {
