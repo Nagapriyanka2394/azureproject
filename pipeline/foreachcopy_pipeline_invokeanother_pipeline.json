@@ -94,6 +94,10 @@
 									"pp_filename": {
 										"value": "@item().name",
 										"type": "Expression"
+									},
+									"pp_archive_directory": {
+										"value": "@pipeline().parameters.pp_archive_directory",
+										"type": "Expression"
 									}
 								}
 							}
