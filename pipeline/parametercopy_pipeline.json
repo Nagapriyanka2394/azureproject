@@ -1,5 +1,5 @@
 {
-	"name": "secondpipeline",
+	"name": "parametercopy_pipeline",
 	"properties": {
 		"activities": [
 			{
