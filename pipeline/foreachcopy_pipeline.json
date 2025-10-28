@@ -1,5 +1,5 @@
 {
-	"name": "thirdpipeline",
+	"name": "foreachcopy_pipeline",
 	"properties": {
 		"activities": [
 			{
@@ -38,6 +38,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -164,6 +165,9 @@
 				"type": "string"
 			},
 			"pp_output_directory": {
+				"type": "string"
+			},
+			"pp_archive_directory": {
 				"type": "string"
 			}
 		},
