@@ -14,7 +14,7 @@
 				"folderPath": "output/sql",
 				"fileSystem": "adfproject"
 			},
-			"columnDelimiter": "\t",
+			"columnDelimiter": ",",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
