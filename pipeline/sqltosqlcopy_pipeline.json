@@ -17,6 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
+						"sqlReaderStoredProcedureName": "[dbo].[getprodbycolor]",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -79,6 +80,9 @@
 				"type": "string"
 			},
 			"pp_tablename_output": {
+				"type": "string"
+			},
+			"color": {
 				"type": "string"
 			}
 		},
