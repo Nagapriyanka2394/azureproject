@@ -1,0 +1,30 @@
+{
+	"name": "sqldynamicsource",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"dd_schemaname": {
+				"type": "string"
+			},
+			"dd_tablename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().dd_schemaname",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().dd_tablename",
+				"type": "Expression"
+			}
+		}
+	}
+}
