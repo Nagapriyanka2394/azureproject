@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": "dataflow_output.csv",
-				"folderPath": "output",
+				"folderPath": "output/dataflow",
 				"fileSystem": "adfproject"
 			},
 			"columnDelimiter": ",",
