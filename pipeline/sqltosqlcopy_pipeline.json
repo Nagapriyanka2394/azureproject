@@ -79,6 +79,35 @@
 						}
 					}
 				]
+			},
+			{
+				"name": "predelete",
+				"type": "Script",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDatabase1",
+					"type": "LinkedServiceReference"
+				},
+				"typeProperties": {
+					"scripts": [
+						{
+							"type": "NonQuery",
+							"text": {
+								"value": "@CONCAT('IF OBJECT_ID(',pipeline().parameters.pp_schemaname,'.',pipeline().parameters.pp_tablename_output,',''''U'''') IS NOT NULL\nBEGIN\n    TRUNCATE TABLE ',pipeline().parameters.pp_schemaname,'.',pipeline().parameters.pp_tablename_output,';\nEND')",
+								"type": "Expression"
+							}
+						}
+					],
+					"scriptBlockExecutionTimeout": "02:00:00"
+				}
 			}
 		],
 		"parameters": {
