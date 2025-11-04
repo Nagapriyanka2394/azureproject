@@ -108,7 +108,7 @@
 						{
 							"type": "NonQuery",
 							"text": {
-								"value": "@CONCAT('IF OBJECT_ID(',pipeline().parameters.pp_schemaname,'.',pipeline().parameters.pp_tablename_output,'''''U''''',') IS NOT NULL\nBEGIN\n    TRUNCATE TABLE ',pipeline().parameters.pp_schemaname,'.',pipeline().parameters.pp_tablename_output,';\nEND')",
+								"value": "@CONCAT('IF OBJECT_ID(''',pipeline().parameters.pp_schemaname,'.',pipeline().parameters.pp_tablename_output,',','''U'') IS NOT NULL\nBEGIN\n    TRUNCATE TABLE ',pipeline().parameters.pp_schemaname,'.',pipeline().parameters.pp_tablename_output,';\nEND')",
 								"type": "Expression"
 							}
 						}
