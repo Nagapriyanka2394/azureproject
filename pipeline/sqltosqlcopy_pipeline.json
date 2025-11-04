@@ -43,7 +43,11 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"dd_schemaname": {
-								"value": "@concat(pipeline().parameters.pp_schemaname,pipeline().parameters.pp_tablename_input)",
+								"value": "@pipeline().parameters.pp_schemaname",
+								"type": "Expression"
+							},
+							"dd_tablename": {
+								"value": "@pipeline().parameters.pp_tablename_input",
 								"type": "Expression"
 							}
 						}
