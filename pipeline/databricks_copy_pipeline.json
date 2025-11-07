@@ -94,7 +94,13 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/nagaaa94@live.com/adfproject/adls_2_delta_copy"
+					"notebookPath": "/Users/nagaaa94@live.com/adfproject/adls_2_delta_copy",
+					"baseParameters": {
+						"filename": {
+							"value": "@pipeline().parameters.pp_out_filename",
+							"type": "Expression"
+						}
+					}
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks1",
