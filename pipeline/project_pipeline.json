@@ -516,7 +516,7 @@
 									{
 										"type": "Query",
 										"text": {
-											"value": "@concat('insert into audit_table(file_name,status)\nvalues(''',item().name,''',''success'')')",
+											"value": "@concat('insert into audit_table(file_name,status)\nvalues(''',item().file_name,''',''success'')')",
 											"type": "Expression"
 										}
 									}
