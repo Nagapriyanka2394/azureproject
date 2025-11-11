@@ -25,10 +25,7 @@
 					"value": "@dataset().ds_filename",
 					"type": "Expression"
 				},
-				"folderPath": {
-					"value": "@dataset().ds_directory",
-					"type": "Expression"
-				},
+				"folderPath": "input/SalesLTProductModel",
 				"fileSystem": {
 					"value": "@dataset().ds_container",
 					"type": "Expression"
