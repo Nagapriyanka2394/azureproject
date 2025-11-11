@@ -169,7 +169,8 @@
 												"value": {
 													"value": "@item().file_name",
 													"type": "Expression"
-												}
+												},
+												"direction": "Input"
 											}
 										],
 										"type": "Query",
