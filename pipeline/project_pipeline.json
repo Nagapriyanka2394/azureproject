@@ -16,14 +16,13 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "DelimitedTextSource",
+						"type": "BinarySource",
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
-							"recursive": true,
-							"enablePartitionDiscovery": false
+							"recursive": true
 						},
 						"formatSettings": {
-							"type": "DelimitedTextReadSettings",
+							"type": "BinaryReadSettings",
 							"compressionProperties": {
 								"type": "ZipDeflateReadSettings"
 							}
@@ -40,19 +39,11 @@
 							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false,
-					"translator": {
-						"type": "TabularTranslator",
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
-					}
+					"enableStaging": false
 				},
 				"inputs": [
 					{
-						"referenceName": "parameterzipdataset",
+						"referenceName": "Binary1",
 						"type": "DatasetReference",
 						"parameters": {
 							"ds_container": {
@@ -81,10 +72,6 @@
 							},
 							"ds1_directory": {
 								"value": "@pipeline().parameters.pp_output_folder",
-								"type": "Expression"
-							},
-							"ds1_filename": {
-								"value": "@replace(pipeline().parameters.pp_file_name,'.txt','.csv')",
 								"type": "Expression"
 							}
 						}
