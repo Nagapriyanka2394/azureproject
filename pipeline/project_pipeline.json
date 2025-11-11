@@ -53,7 +53,21 @@
 				"inputs": [
 					{
 						"referenceName": "parameterzipdataset",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_container": {
+								"value": "@pipeline().parameters.pp_container",
+								"type": "Expression"
+							},
+							"ds_folder": {
+								"value": "@pipeline().parameters.pp_input_folder",
+								"type": "Expression"
+							},
+							"ds_filename": {
+								"value": "@pipeline().parameters.pp_file_name",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
