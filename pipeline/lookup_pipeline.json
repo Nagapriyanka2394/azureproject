@@ -162,20 +162,9 @@
 							"typeProperties": {
 								"scripts": [
 									{
-										"parameters": [
-											{
-												"name": "filename",
-												"type": "String",
-												"value": {
-													"value": "@item().file_name",
-													"type": "Expression"
-												},
-												"direction": "Input"
-											}
-										],
 										"type": "Query",
 										"text": {
-											"value": "insert into audit_table\n(file_name,status)\nvalues(?,'success')",
+											"value": "@concat('INSERT INTO audit_table (file_name, status) VALUES (''', item().file_name, ''', ''success'')')\n",
 											"type": "Expression"
 										}
 									}
