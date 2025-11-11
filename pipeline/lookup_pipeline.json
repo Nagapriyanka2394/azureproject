@@ -162,6 +162,16 @@
 							"typeProperties": {
 								"scripts": [
 									{
+										"parameters": [
+											{
+												"name": "filename",
+												"type": "String",
+												"value": {
+													"value": "@item().file_name",
+													"type": "Expression"
+												}
+											}
+										],
 										"type": "Query",
 										"text": {
 											"value": "insert into audit_table\n(file_name,status)\nvalues(@item().file_name,'success')",
