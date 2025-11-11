@@ -60,7 +60,17 @@
 				"outputs": [
 					{
 						"referenceName": "Binary2",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_container": {
+								"value": "@pipeline().parameters.pp_container",
+								"type": "Expression"
+							},
+							"ds_folder": {
+								"value": "@pipeline().parameters.pp_output_folder",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
