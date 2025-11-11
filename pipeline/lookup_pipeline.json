@@ -164,7 +164,7 @@
 									{
 										"type": "Query",
 										"text": {
-											"value": "insert into audit_table\n(file_name,status)\nvalues(item().file_name,'success')",
+											"value": "@insert into audit_table\n(file_name,status)\nvalues(item().file_name,'success')",
 											"type": "Expression"
 										}
 									}
