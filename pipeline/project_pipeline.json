@@ -63,14 +63,14 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "parametercsvdataset",
+						"referenceName": "parameterdataset",
 						"type": "DatasetReference",
 						"parameters": {
-							"ds1_container": {
+							"ds_container": {
 								"value": "@pipeline().parameters.pp_container",
 								"type": "Expression"
 							},
-							"ds1_directory": {
+							"ds_directory": {
 								"value": "@pipeline().parameters.pp_output_folder",
 								"type": "Expression"
 							}
