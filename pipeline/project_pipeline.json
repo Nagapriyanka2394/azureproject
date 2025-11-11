@@ -23,7 +23,10 @@
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
-							"type": "DelimitedTextReadSettings"
+							"type": "DelimitedTextReadSettings",
+							"compressionProperties": {
+								"type": "ZipDeflateReadSettings"
+							}
 						}
 					},
 					"sink": {
@@ -49,22 +52,8 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "parameterdataset",
-						"type": "DatasetReference",
-						"parameters": {
-							"ds_container": {
-								"value": "@pipeline().parameters.pp_container",
-								"type": "Expression"
-							},
-							"ds_directory": {
-								"value": "@pipeline().parameters.pp_input_folder",
-								"type": "Expression"
-							},
-							"ds_filename": {
-								"value": "@pipeline().parameters.pp_file_name",
-								"type": "Expression"
-							}
-						}
+						"referenceName": "parameterzipdataset",
+						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
